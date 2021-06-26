@@ -1,0 +1,5 @@
+package entity;
+
+public enum JeepModel {
+  GRAND_CHEROKEE, CHEROKEE, COMPASS, GLADIATOR, WRANGLER_4XE, WRANGLER;
+}
