@@ -7,11 +7,10 @@ import org.springframework.boot.web.server.LocalServerPort;
 
 public class BaseTest {
   @LocalServerPort
-  private int serverPort;
+  int serverPort;
   
   @Autowired
-  
-  private TestRestTemplate restTemplate;
+  TestRestTemplate restTemplate;
   
   protected String getBaseUri() {
     return String.format("http://localhost:%d/jeeps", serverPort);
