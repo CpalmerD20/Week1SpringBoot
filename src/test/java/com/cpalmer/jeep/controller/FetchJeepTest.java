@@ -12,9 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
+import com.cpalmer.jeep.entity.Jeep;
+import com.cpalmer.jeep.entity.JeepModel;
 import Jeep.Controller.Support.FetchJeepTestSupport;
-import entity.Jeep;
-import entity.JeepModel;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")

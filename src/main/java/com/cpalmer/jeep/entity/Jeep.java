@@ -1,4 +1,4 @@
-package entity;
+package com.cpalmer.jeep.entity;
 
 import java.math.BigDecimal;
 import lombok.AllArgsConstructor;

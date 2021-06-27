@@ -1,8 +1,8 @@
-package com.cpalmer.controller;
+package com.cpalmer.jeep.controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.RestController;
-import entity.Jeep;
+import com.cpalmer.jeep.entity.Jeep;
 
 @RestController
 public class BasicJeepSalesController implements JeepSalesController{
