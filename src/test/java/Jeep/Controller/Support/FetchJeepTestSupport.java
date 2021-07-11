@@ -1,6 +1,7 @@
 package Jeep.Controller.Support;
 
 import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import com.cpalmer.jeep.entity.Jeep;
@@ -29,6 +30,7 @@ public class FetchJeepTestSupport extends BaseTest {
         .build()
         );
     
+    Collections.sort(list);
     return list;
   }
 }

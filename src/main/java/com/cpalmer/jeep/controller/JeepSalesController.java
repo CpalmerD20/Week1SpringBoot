@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import com.cpalmer.jeep.entity.Jeep;
+import com.cpalmer.jeep.entity.JeepModel;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -59,6 +60,6 @@ public interface JeepSalesController {
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
   List <Jeep> fetchJeeps
-  (@RequestParam(required = false) String model,
+  (@RequestParam(required = false) JeepModel model,
    @RequestParam(required = false) String trim );
 }
