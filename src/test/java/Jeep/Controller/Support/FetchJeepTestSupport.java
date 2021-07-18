@@ -1,14 +1,25 @@
 package Jeep.Controller.Support;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import org.springframework.http.HttpStatus;
 import com.cpalmer.jeep.entity.Jeep;
 import com.cpalmer.jeep.entity.JeepModel;
 
 public class FetchJeepTestSupport extends BaseTest {
-  
+  protected void assertErrorMessageValid(Map<String, Object> error, HttpStatus status) {
+    assertThat(error)
+    .containsKey("message")
+    .containsEntry("status code", status.value())
+    .containsEntry("uri", "/jeeps")
+    .containsKey("timestamp")
+    .containsEntry("reason", status.getReasonPhrase());
+  }
+
   protected List<Jeep> buildExpected() {
     List<Jeep> list = new LinkedList<>();
     
@@ -33,4 +44,5 @@ public class FetchJeepTestSupport extends BaseTest {
     Collections.sort(list);
     return list;
   }
+  
 }
